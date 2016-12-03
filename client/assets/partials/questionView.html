@@ -1,0 +1,11 @@
+<h1>{{thisQuestion.question}}</h1>
+<h3>{{thisQuestion.description}}</h3>
+
+<div class="card" ng-repeat="answer in thisQuestion.answers | orderBy:'answer.likes' ">
+	<h4>{{answer._user.first}}:</h4>
+	<h4>{{answer.answer}}</h4>
+	<p>{{answer.description}}</p>
+	<p>{{answer.likes}}</p>
+	<button ng-click="likeAnswer(answer._id, thisQuestion._id)">Like</button>
+	<hr>
+</div>

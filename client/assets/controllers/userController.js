@@ -22,7 +22,7 @@ $scope.users = [];
 			if(data.hasOwnProperty('errors')){
 				$scope.loginErrors = data.errors;
 			} else {
-				$location.url('/home')
+				$location.url('/questions')
 			}
 		})
 	}

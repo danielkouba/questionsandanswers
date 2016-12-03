@@ -1,0 +1,14 @@
+<h1>{{thisQuestion.question}}</h1>
+<h3>{{thisQuestion.description}}</h3>
+<fieldset>
+	<legend><h2>Add an Answer</h2></legend>
+	<label>
+		Answer:
+		<input type="textfield" ng-model="newAnswer.answer">
+	</label>
+	<label>
+		Description:
+		<input type="textfield" ng-model="newAnswer.details">
+	</label>
+	<button ng-click='addAnswer(thisQuestion._id)'>Add Answer</button>
+</fieldset>

@@ -1,0 +1,17 @@
+<div class="wrapper" data-ng-init="indexQuestions()">
+<a href="#/questions/create"> Add a question </a>
+<table>
+	<tr>
+		<th>Question</th>
+		<th>Answers</th>
+		<th>Action</th>
+	</tr>
+	<tr ng-repeat="question in allQuestions">
+		<td>{{question.question}}</td>
+		<td>{{question.answers.length}}</td>
+		<td><a href="#/questions/{{question._id}}/view">Show</a><a href="#/questions/{{question._id}}/answer">Answer</a></td>
+	</tr>
+</table>	
+
+
+</div>

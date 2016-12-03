@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-
+var Schema = mongoose.Schema
 ////////////////////////////////////////
 // Question Model
 ////////////////////////////////////////
@@ -16,11 +16,11 @@ var questionSchema = new mongoose.Schema({
 		required: true,
 		trim: true
 	},
-	comments: {
-		type: String,
-		required: true,
-		trim: true
-	}
+	answers: [{
+		type: Schema.Types.ObjectId, 
+		ref: 'Answer',
+		default: []
+	}],
 },{
 	timestamps: {
 		createdAt: 'created_at',

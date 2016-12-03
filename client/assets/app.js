@@ -24,10 +24,26 @@ myApp.config(function($httpProvider, $routeProvider){
 		controller: 'userController',
 		controllerAs: 'UC'
 	})
-	.when('/home',{
-		templateUrl: 'home.html',
-		controller: 'homeController',
+	.when('/questions',{
+		templateUrl: 'assets/partials/questions.html',
+		controller: 'questionController'
 	})
+	.when('/questions/create',{
+		templateUrl: 'assets/partials/questionForm.html',
+		controller: 'questionController'
+	})
+	.when('/questions/:questionid/view',{
+		templateUrl: 'assets/partials/questionView.html',
+		controller: 'questionController'
+	})
+	.when('/questions/:answerquestionid/answer',{
+		templateUrl: 'assets/partials/answerquestionView.html',
+		controller: 'questionController'
+	})
+	// .when('/home',{
+	// 	templateUrl: 'home.html',
+	// 	controller: 'homeController',
+	// })
 	.otherwise({
 		redirectTo: '/'
 	})
