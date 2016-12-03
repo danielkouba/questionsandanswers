@@ -1,0 +1,28 @@
+
+
+  <!-- <div ng-controller="userController as UC"> -->
+  <fieldset>
+  
+  <legend><h4>Register:</h4></legend>
+  <p ng-repeat='error in regErrors'>{{error.message}}</p>
+
+  <form>
+  Email: <input type='text' ng-model='newUser.email' > <br>
+  First Name: <input type='text' ng-model='newUser.first' > <br>
+  Last Name: <input type='text' ng-model='newUser.last' > <br>
+  Password: <input type='text' ng-model='newUser.password' > <br>
+  Password Confirm: <input type='text'> <br>
+  <!-- Birthday: <input type='date' ng-model='UC.user.birthday'> <br> -->
+  <input type="submit" value="Create an account" ng-click='adduser()'> <br>
+  </form>
+  </fieldset>
+
+  <fieldset>
+  <legend><h4>Login:</h4></legend>
+  <p ng-repeat='error in UC.loginErrors'>{{error}}</p>
+  <form>
+  Email: <input type='text' ng-model='user.email' > <br>
+  Password: <input type='text' ng-model='user.password' > <br>
+  <input type="submit" value="Login" ng-click='loginuser()'> <br>
+  </form>
+  </fieldset>

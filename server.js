@@ -46,5 +46,5 @@ require("./server/config/routes.js")(app);
 // Start Server
 ////////////////////////////////////////
 app.listen(port, function(){
-	console.log('server running on ${port}')
+	console.log('server running on' + port)
 })
